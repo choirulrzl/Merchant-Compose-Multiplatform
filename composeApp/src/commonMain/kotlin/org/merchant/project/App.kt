@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -19,6 +20,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -40,18 +42,29 @@ import merchantcomposemultiplatform.composeapp.generated.resources.logo_livin_me
 import merchantcomposemultiplatform.composeapp.generated.resources.notif_white
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.merchant.project.model.Banner
 import org.merchant.project.model.Menu
+import org.merchant.project.model.dummyBanner
 import org.merchant.project.model.dummyMenu
+import org.merchant.project.model.dummyPromoBanner
+import org.merchant.project.ui.component.BannerItem
 import org.merchant.project.ui.component.MenuItem
 
 @Composable
 @Preview
 fun App() {
-    MaterialTheme {
-        Column {
-            Header()
-            Spacer(modifier = Modifier.height(28.dp))
-            TransactionCard()
+    MaterialTheme{
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = Color(0xDDE1F7).copy(1f)
+        ) {
+            Column {
+                Header()
+                Spacer(modifier = Modifier.height(28.dp))
+                TransactionCard()
+                Spacer(modifier = Modifier.height(28.dp))
+                BannerRow(dummyPromoBanner)
+            }
         }
     }
 }
@@ -247,7 +260,7 @@ fun TransactionCard() {
     Card(
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.background,
+            containerColor = Color.White,
         ),
         modifier = Modifier.padding(start = 12.dp, end = 12.dp)
     ) {
@@ -258,13 +271,17 @@ fun TransactionCard() {
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text(
-                    text = "Pendapatan Hari Ini, 23 Juli 2025"
+                    text = "Pendapatan Hari Ini, 23 Juli 2025",
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f)
                 )
-                Spacer(modifier = Modifier.weight(1f))
+//                Spacer(modifier = Modifier.weight(1f))
                 Text(
                     text = "Lihat Detail",
                     fontWeight = FontWeight.Bold,
-                    color = Color.Blue
+                    color = Color.Blue,
+                    modifier = Modifier.padding(start = 8.dp)
                 )
             }
             Spacer(modifier = Modifier.height(8.dp))
@@ -316,4 +333,34 @@ fun TransactionCard() {
 @Composable
 fun TransactionCardPreview() {
     TransactionCard()
+}
+
+@Composable
+fun BannerRow(
+    listBanner: List<Banner>,
+    modifier: Modifier = Modifier
+) {
+    Column {
+        Text(
+            text = "Informasi Merchant",
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(start = 12.dp)
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        LazyRow(
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
+            contentPadding = PaddingValues(horizontal = 16.dp),
+            modifier = modifier
+        ) {
+            items(listBanner, key = { it.title }) { banner ->
+                BannerItem(banner)
+            }
+        }
+    }
+}
+
+@Preview
+@Composable
+fun BannerRowPreview() {
+    BannerRow(dummyPromoBanner)
 }

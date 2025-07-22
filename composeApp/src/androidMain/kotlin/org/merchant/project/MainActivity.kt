@@ -33,36 +33,8 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Preview(
-    device = PIXEL_4,
-    showBackground = true,
-)
+@Preview
 @Composable
 fun AppAndroidPreview() {
-//    App()
-    MenuItem(Modifier)
-}
-
-@Composable
-fun MenuItem(
-
-    modifier: Modifier = Modifier,
-) {
-    Column(
-        modifier = modifier,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Image(
-            painter = painterResource(R.drawable.ic_nav_catalog_false),
-            contentDescription = null,
-            modifier = Modifier
-                .size(60.dp)
-                .clip(CircleShape)
-        )
-        Text(
-            text = "Pesanan",
-            fontSize = 10.sp,
-            modifier = Modifier.paddingFromBaseline(top = 16.dp, bottom = 8.dp)
-        )
-    }
+    App()
 }
