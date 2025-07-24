@@ -22,7 +22,14 @@ import merchantcomposemultiplatform.composeapp.generated.resources.Res
 import merchantcomposemultiplatform.composeapp.generated.resources.ic_chevrolet_right
 import merchantcomposemultiplatform.composeapp.generated.resources.ic_poin
 import merchantcomposemultiplatform.composeapp.generated.resources.ic_profile
+import merchantcomposemultiplatform.composeapp.generated.resources.owner_info_account_status
+import merchantcomposemultiplatform.composeapp.generated.resources.owner_info_content_desc_icon_point
+import merchantcomposemultiplatform.composeapp.generated.resources.owner_info_content_desc_navigate_detail
+import merchantcomposemultiplatform.composeapp.generated.resources.owner_info_content_desc_role_status
+import merchantcomposemultiplatform.composeapp.generated.resources.owner_info_name
+import merchantcomposemultiplatform.composeapp.generated.resources.owner_info_point_count
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -42,19 +49,19 @@ fun OwnerInfo() {
             ) {
                 Column {
                     Text(
-                        text = "Achmad Choirul Rizal",
+                        text = stringResource(Res.string.owner_info_name),
                         color = Color.White
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(
                             painter = painterResource(Res.drawable.ic_profile),
-                            contentDescription = "Role Status",
+                            contentDescription = stringResource(Res.string.owner_info_content_desc_role_status),
                             modifier = Modifier.size(20.dp),
                             tint = Color.White
                         )
                         Text(
-                            text = "Pemilik",
+                            text = stringResource(Res.string.owner_info_account_status),
                             color = Color.White
                         )
                     }
@@ -65,18 +72,18 @@ fun OwnerInfo() {
                 ) {
                     Icon(
                         painter = painterResource(Res.drawable.ic_poin),
-                        contentDescription = "Poin",
+                        contentDescription = stringResource(Res.string.owner_info_content_desc_icon_point),
                         modifier = Modifier.size(20.dp),
                         tint = Color.Unspecified
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
-                        text = "27 Point",
+                        text = stringResource(Res.string.owner_info_point_count),
                         color = Color.White
                     )
                     Icon(
                         painter = painterResource(Res.drawable.ic_chevrolet_right),
-                        contentDescription = "To detail Point",
+                        contentDescription = stringResource(Res.string.owner_info_content_desc_navigate_detail),
                         modifier = Modifier.size(20.dp),
                         tint = Color.White
                     )

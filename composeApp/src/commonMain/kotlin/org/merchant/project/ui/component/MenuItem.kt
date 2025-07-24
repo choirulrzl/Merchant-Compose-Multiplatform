@@ -16,9 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import merchantcomposemultiplatform.composeapp.generated.resources.Res
 import merchantcomposemultiplatform.composeapp.generated.resources.ic_pesanan_dashboard
-import merchantcomposemultiplatform.composeapp.generated.resources.menu_order
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.merchant.project.model.Menu
 
@@ -52,7 +50,7 @@ fun MenuItem(
 fun MenuItemPreview() {
     MaterialTheme {
         MenuItem(
-            menu = Menu("Pesanan", Res.drawable.ic_pesanan_dashboard),
+            menu = Menu("pesanan", Res.drawable.ic_pesanan_dashboard),
             Modifier
         )
     }

@@ -24,7 +24,14 @@ import androidx.compose.ui.unit.sp
 import merchantcomposemultiplatform.composeapp.generated.resources.Res
 import merchantcomposemultiplatform.composeapp.generated.resources.ic_chevrolet_right
 import merchantcomposemultiplatform.composeapp.generated.resources.ic_qris_white
+import merchantcomposemultiplatform.composeapp.generated.resources.transaction_card_content_desc_icon_to_qris_static
+import merchantcomposemultiplatform.composeapp.generated.resources.transaction_card_content_desc_qris_logo
+import merchantcomposemultiplatform.composeapp.generated.resources.transaction_card_income_date_label
+import merchantcomposemultiplatform.composeapp.generated.resources.transaction_card_nominal
+import merchantcomposemultiplatform.composeapp.generated.resources.transaction_card_show_qris
+import merchantcomposemultiplatform.composeapp.generated.resources.transaction_card_to_detail
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -43,14 +50,13 @@ fun TransactionCard() {
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text(
-                    text = "Pendapatan Hari Ini, 23 Juli 2025",
+                    text = stringResource(Res.string.transaction_card_income_date_label),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.weight(1f)
                 )
-//                Spacer(modifier = Modifier.weight(1f))
                 Text(
-                    text = "Lihat Detail",
+                    text = stringResource(Res.string.transaction_card_to_detail),
                     fontWeight = FontWeight.Bold,
                     color = Color.Blue,
                     modifier = Modifier.padding(start = 8.dp)
@@ -58,7 +64,7 @@ fun TransactionCard() {
             }
             Spacer(modifier = Modifier.height(8.dp))
             Text(
-                text = "Rp 78.000",
+                text = stringResource(Res.string.transaction_card_nominal),
                 fontWeight = FontWeight.Bold,
                 fontSize = 24.sp
             )
@@ -80,18 +86,18 @@ fun TransactionCard() {
                 ) {
                     Image(
                         painter = painterResource(Res.drawable.ic_qris_white),
-                        contentDescription = "Logo QRIS",
+                        contentDescription = stringResource(Res.string.transaction_card_content_desc_qris_logo),
                         modifier = Modifier.height(20.dp)
                     )
                     Spacer(modifier = Modifier.weight(1f))
                     Text(
-                        text = "Tampilkan QRIS",
+                        text = stringResource(Res.string.transaction_card_show_qris),
                         color = Color.Blue,
                         modifier = Modifier.padding(4.dp),
                     )
                     Icon(
                         painter = painterResource(Res.drawable.ic_chevrolet_right),
-                        contentDescription = "To QRIS Static",
+                        contentDescription = stringResource(Res.string.transaction_card_content_desc_icon_to_qris_static),
                         modifier = Modifier.size(20.dp),
                         tint = Color.Blue
                     )

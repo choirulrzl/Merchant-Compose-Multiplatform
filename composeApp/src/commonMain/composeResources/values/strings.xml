@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
     <string name="app_name">My awesome app</string>
-    <string name="menu_order">Ganti pesanan</string>
+    <string name="menu_order">pesanan</string>
     <string name="menu_cashier">Kasir</string>
     <string name="menu_report">Laporan</string>
+
+    <string name="owner_info_name">Pak Choi</string>
+    <string name="owner_info_account_status">Pemilik</string>
+    <string name="owner_info_content_desc_role_status">Status role</string>
+    <string name="owner_info_content_desc_icon_point">Poin</string>
+    <string name="owner_info_content_desc_navigate_detail">To Detail Point</string>
+    <string name="owner_info_point_count">27 Point</string>
+
+    <string name="outlet_info_content_des_profile_photo">Profile photo</string>
+    <string name="outlet_info_outlet_name">Toko Es Indragiri</string>
+    <string name="outlet_info_outlet_address">Gg. Anggur Jalan Indra Giri Kec. Kanigaran Kota Probolinggo</string>
+
+    <string name="transaction_card_income_date_label">Pendapatan hari ini, 23 Juli 2025</string>
+    <string name="transaction_card_to_detail">Lihat Detail</string>
+    <string name="transaction_card_nominal">Rp 80.000</string>
+    <string name="transaction_card_show_qris">Tampilkan QRIS</string>
+    <string name="transaction_card_content_desc_qris_logo">QRIS Logo</string>
+    <string name="transaction_card_content_desc_icon_to_qris_static">To QRIS Static</string>
+
+    <string name="navbar_label_home">Home</string>
+    <string name="navbar_label_catalog">Catalog</string>
+    <string name="navbar_label_lending">Lending</string>
+    <string name="navbar_label_settings">Settings</string>
+
 </resources>

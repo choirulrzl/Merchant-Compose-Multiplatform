@@ -19,7 +19,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import merchantcomposemultiplatform.composeapp.generated.resources.Res
 import merchantcomposemultiplatform.composeapp.generated.resources.ic_image_color
+import merchantcomposemultiplatform.composeapp.generated.resources.outlet_info_content_des_profile_photo
+import merchantcomposemultiplatform.composeapp.generated.resources.outlet_info_outlet_address
+import merchantcomposemultiplatform.composeapp.generated.resources.outlet_info_outlet_name
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -36,7 +40,7 @@ fun OutletInfo() {
         ) {
             Image(
                 painter = painterResource(Res.drawable.ic_image_color),
-                contentDescription = "Profile image",
+                contentDescription = stringResource(Res.string.outlet_info_content_des_profile_photo),
 
                 modifier = Modifier
                     .width(64.dp)
@@ -45,12 +49,12 @@ fun OutletInfo() {
             Spacer(modifier = Modifier.width(8.dp))
             Column {
                 Text(
-                    text = "Toko Es Indragiri",
+                    text = stringResource(Res.string.outlet_info_outlet_name),
                     color = Color.White
                 )
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "Gg. Anggur Jalan Indra Giri Kec. Kanigaran Kota Probolinggo",
+                    text = stringResource(Res.string.outlet_info_outlet_address),
                     maxLines = 1,
                     color = Color.White,
                     overflow = TextOverflow.Ellipsis
