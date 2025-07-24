@@ -1,7 +1,6 @@
 package org.merchant.project.ui.component
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
@@ -15,14 +14,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import merchantcomposemultiplatform.composeapp.generated.resources.Res
-import merchantcomposemultiplatform.composeapp.generated.resources.ic_pesanan_dashboard
-import merchantcomposemultiplatform.composeapp.generated.resources.ic_profile
 import merchantcomposemultiplatform.composeapp.generated.resources.image_1
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.merchant.project.model.Banner
-import org.merchant.project.model.Menu
-import org.merchant.project.model.dummyBanner
 
 @Composable
 fun BannerItem(

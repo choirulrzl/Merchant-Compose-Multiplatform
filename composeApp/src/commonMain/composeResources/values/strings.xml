@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">My awesome app</string>
+    <string name="menu_order">Ganti pesanan</string>
+    <string name="menu_cashier">Kasir</string>
+    <string name="menu_report">Laporan</string>
+</resources>
